@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore'
-import { addExpense } from './actions/expenses'
-import { setTextFilter } from './actions/filters'
+// import { addExpense } from './actions/expenses'
+// import { setTextFilter } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
 
 import 'normalize.css';
@@ -35,7 +35,7 @@ const store = configureStore();
 
 const state = store.getState();
 const visibleExpense = getVisibleExpenses(state.expenses, state.filter);
-console.log(visibleExpense);
+//console.log(visibleExpense);
 
 const jsx = (
     <Provider store={store}>
